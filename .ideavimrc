@@ -1,0 +1,25 @@
+" General settings.
+" Yank to system clipboard.
+set clipboard+=unnamed
+
+" Mappings.
+let mapleader = " "
+" Delete to black hole register.
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+" Move back and forth.
+nnoremap <leader>b :action Back<CR>
+nnoremap <leader>f :action Forward<CR>
+nnoremap <leader><Space> :action GoToAll<CR>
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
+" New split.
+nnoremap <leader>n :action SplitVertically<CR>
+" Alternate between splits.
+nnoremap <leader>w <C-w>
+
+" Plugins.
+" Highlight copied text.
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+
+
