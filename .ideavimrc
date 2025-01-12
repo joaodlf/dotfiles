@@ -12,7 +12,7 @@ set surround
 " Enable easymotion - requires IdeaVim-EasyMotion and AceJump (from marketplace).
 set easymotion
 set notimeout
-" Enable which-key - required WhichKey from marketplace.
+" Enable which-key - requires WhichKey (from marketplace).
 set which-key
 let g:WhichKey_FontSize = 16
 let g:WhichKey_SortOrder = "by_key_prefix_first"
