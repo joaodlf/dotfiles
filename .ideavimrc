@@ -1,4 +1,4 @@
-" General settings.
+" --- GENERAL SETTINGS ---
 " Yank to system clipboard.
 set clipboard+=unnamed
 " Ignore case while searching.
@@ -12,44 +12,69 @@ set surround
 " Enable easymotion - requires IdeaVim-EasyMotion and AceJump (from marketplace).
 set easymotion
 set notimeout
-" Enable which-key - required WhickKey from marketplace.
+" Enable which-key - required WhichKey from marketplace.
 set which-key
+let g:WhichKey_FontSize = 16
+let g:WhichKey_SortOrder = "by_key_prefix_first"
 
-" Mappings.
-" Set leader key.
+" ----------------
+" --- MAPPINGS ---
 let mapleader = " "
-" Delete to black hole register.
+let g:WhichKeyDesc_leader = "<leader> Leader Key"
+
 map <leader>d "_d
-" Move back and forth.
-map <leader>b <Action>(Back)
-map <leader>f <Action>(Forward)
-" Open project tool window/nerdtree.
-map <leader>e <Action>(ActivateProjectToolWindow)
-" Splits.
-map <leader>ss <Action>(SplitVertically)
-map <leader>sd <Action>(NextSplitter)
-" Enable easymotion (start typing)
-map <leader>j <Plug>(easymotion-s)
-" Comment with line comment
-map <leader>c <Action>(CommentByLineComment)
-" Rename element in editor.
-map <leader>rn <Action>(RenameElement)
-" File search operations.
-map <leader>ff <Action>(GotoFile)
-map <leader>fe <Action>(SearchEverywhere)
-map <leader>fa <Action>(GotoAction)
+let g:WhichKeyDesc_d = "<leader>d Delete To Black Hole Register"
+
 map <leader><leader> <Action>(RecentFiles)
-" Go to...
-nmap <leader>gi <Action>(GotoImplementation)
-" Occurrence selection.
-map <leader>sn <Action>(SelectNextOccurrence)
-map <leader>sa <Action>(SelectAllOccurrences)
-" Reload .ideavimrc.
-map <leader>si :source ~/.ideavimrc<CR>
+let g:WhichKeyDesc_RecentFiles = "<leader><leader> Recent Files"
 
-" Plugins.
+map <leader>e <Action>(ActivateProjectToolWindow)
+let g:WhichKeyDesc_e = "<leader>e Open File Explorer"
+
+map <leader>j <Plug>(easymotion-s)
+let g:WhichKeyDesc_easymotion = "<leader>j Toggle Easymotion"
+
+map <leader>c <Action>(CommentByLineComment)
+let g:WhichKeyDesc_comment = "<leader>c Comment By Line"
+
+map <leader>r <Action>(RenameElement)
+let g:WhichKeyDesc_rename = "<leader>r Rename In Code"
+
+" --- SPLIT
+let g:WhichKeyDesc_split= "<leader>s Split..."
+map <leader>ss <Action>(SplitVertically)
+let g:WhichKeyDesc_NewSplit = "<leader>ss New Vertical Split"
+map <leader>sd <Action>(NextSplitter)
+let g:WhichKeyDesc_SplitCycle = "<leader>sd Cycle Through Splits"
+
+" --- FIND
+let g:WhichKeyDesc_File = "<leader>f Find..."
+map <leader>fa <Action>(GotoFile)
+let g:WhichKeyDesc_GoToFile = "<leader>ff Find File"
+map <leader>fe <Action>(SearchEverywhere)
+let g:WhichKeyDesc_SearchEverywhere = "<leader>fe Find Everywhere"
+map <leader>fa <Action>(GotoAction)
+let g:WhichKeyDesc_GoToAction = "<leader>fa Find Action"
+
+" --- GO TO
+let g:WhichKeyDesc_GoTo = "<leader>g Go To..."
+map <leader>gi <Action>(GotoImplementation)
+let g:WhichKeyDesc_GoToImplementation = "<leader>gi Go To Implementation"
+map <leader>gb <Action>(Back)
+let g:WhichKeyDesc_back = "<leader>gb Go Back"
+map <leader>gf <Action>(Forward)
+let g:WhichKeyDesc_forward = "<leader>gf Go Forward"
+
+" --- MULTICURSOR
+let g:WhichKeyDesc_NextOccurrence = "<leader>m Multi Cursor"
+map <leader>mn <Action>(SelectNextOccurrence)
+let g:WhichKeyDesc_SelectNextOccurrence = "<leader>mn Select Next Occurrence"
+map <leader>ma <Action>(SelectAllOccurrences)
+let g:WhichKeyDesc_SelectAllOccurrences = "<leader>ma Select All Occurrences"
+
+" -------------
+" ---PLUGINS---
 " Highlight copied text.
-Plug 'machakann/vim-highlightedyank'
-" File explorer vim integration.
-Plug 'preservim/nerdtree'
-
+Plug "machakann/vim-highlightedyank"
+" File explore vim integration.
+Plug "preservim/nerdtree"
