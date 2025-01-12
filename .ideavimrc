@@ -1,25 +1,55 @@
 " General settings.
 " Yank to system clipboard.
 set clipboard+=unnamed
+" Ignore case while searching.
+set ignorecase
+" ... unless any character in the search is uppercase.
+set smartcase
+" Highlight all search results.
+set hlsearch
+" Enable surround plugin (ex: cs'" - change single quotes to double quotes).
+set surround
+" Enable easymotion - requires IdeaVim-EasyMotion and AceJump (from marketplace).
+set easymotion
+set notimeout
+" Enable which-key - required WhickKey from marketplace.
+set which-key
 
 " Mappings.
+" Set leader key.
 let mapleader = " "
 " Delete to black hole register.
-nnoremap <leader>d "_d
-vnoremap <leader>d "_d
+map <leader>d "_d
 " Move back and forth.
-nnoremap <leader>b :action Back<CR>
-nnoremap <leader>f :action Forward<CR>
-nnoremap <leader><Space> :action GoToAll<CR>
-nnoremap <leader>e :action ActivateProjectToolWindow<CR>
-" New split.
-nnoremap <leader>n :action SplitVertically<CR>
-" Alternate between splits.
-nnoremap <leader>w <C-w>
+map <leader>b <Action>(Back)
+map <leader>f <Action>(Forward)
+" Open project tool window/nerdtree.
+map <leader>e <Action>(ActivateProjectToolWindow)
+" Splits.
+map <leader>ss <Action>(SplitVertically)
+map <leader>sd <Action>(NextSplitter)
+" Enable easymotion (start typing)
+map <leader>j <Plug>(easymotion-s)
+" Comment with line comment
+map <leader>c <Action>(CommentByLineComment)
+" Rename element in editor.
+map <leader>rn <Action>(RenameElement)
+" File search operations.
+map <leader>ff <Action>(GotoFile)
+map <leader>fe <Action>(SearchEverywhere)
+map <leader>fa <Action>(GotoAction)
+map <leader><leader> <Action>(RecentFiles)
+" Go to...
+nmap <leader>gi <Action>(GotoImplementation)
+" Occurrence selection.
+map <leader>sn <Action>(SelectNextOccurrence)
+map <leader>sa <Action>(SelectAllOccurrences)
+" Reload .ideavimrc.
+map <leader>si :source ~/.ideavimrc<CR>
 
 " Plugins.
 " Highlight copied text.
 Plug 'machakann/vim-highlightedyank'
+" File explorer vim integration.
 Plug 'preservim/nerdtree'
-
 
