@@ -40,6 +40,14 @@ let g:WhichKeyDesc_comment = "<leader>c Comment By Line"
 map <leader>r <Action>(RenameElement)
 let g:WhichKeyDesc_rename = "<leader>r Rename In Code"
 
+map <leader>1 <Action>(Back)
+let g:WhichKeyDesc_back = "<leader>1 Go Back"
+map <leader>2 <Action>(Forward)
+let g:WhichKeyDesc_forward = "<leader>2 Go Forward"
+
+map <leader>v <Action>(ShowErrorDescription)
+let g:WhichKeyDesc_ShowErrorDescription = "<leader>v View Error Description"
+
 " --- SPLIT
 let g:WhichKeyDesc_split= "<leader>s Split..."
 map <leader>ss <Action>(SplitVertically)
@@ -60,10 +68,6 @@ let g:WhichKeyDesc_GoToAction = "<leader>fa Find Action"
 let g:WhichKeyDesc_GoTo = "<leader>g Go To..."
 map <leader>gi <Action>(GotoImplementation)
 let g:WhichKeyDesc_GoToImplementation = "<leader>gi Go To Implementation"
-map <leader>gb <Action>(Back)
-let g:WhichKeyDesc_back = "<leader>gb Go Back"
-map <leader>gf <Action>(Forward)
-let g:WhichKeyDesc_forward = "<leader>gf Go Forward"
 
 " --- MULTICURSOR
 let g:WhichKeyDesc_NextOccurrence = "<leader>m Multi Cursor"
