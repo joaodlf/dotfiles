@@ -48,6 +48,11 @@ let g:WhichKeyDesc_forward = "<leader>2 Go Forward"
 map <leader>v <Action>(ShowErrorDescription)
 let g:WhichKeyDesc_ShowErrorDescription = "<leader>v View Error Description"
 
+map <leader>[ [{
+let g:WhichKeyDesc_PreviousUnmatched= "<leader>[ Previous Unmatched {"
+map <leader>] ]}
+let g:WhichKeyDesc_PreviousUnmatched= "<leader>] Next Unmatched }"
+
 " --- SPLIT
 let g:WhichKeyDesc_split= "<leader>s Split..."
 map <leader>ss <Action>(SplitVertically)
