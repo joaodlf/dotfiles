@@ -1,6 +1,9 @@
+" ------------------------
 " --- GENERAL SETTINGS ---
 " Yank to system clipboard.
 set clipboard+=unnamed
+" Show relative line numbers.
+set number relativenumber
 " Ignore case while searching.
 set ignorecase
 " ... unless any character in the search is uppercase.
@@ -12,75 +15,33 @@ set surround
 " Enable easymotion - requires IdeaVim-EasyMotion and AceJump (from marketplace).
 set easymotion
 set notimeout
-" Enable which-key - requires WhichKey (from marketplace).
-set which-key
-let g:WhichKey_FontSize = 16
-let g:WhichKey_SortOrder = "by_key_prefix_first"
-
 " ----------------
 " --- MAPPINGS ---
 let mapleader = " "
-let g:WhichKeyDesc_leader = "<leader> Leader Key"
-
+" Delete to black hole register.
 map <leader>d "_d
-let g:WhichKeyDesc_d = "<leader>d Delete To Black Hole Register"
-
-map <leader><leader> <Action>(RecentFiles)
-let g:WhichKeyDesc_RecentFiles = "<leader><leader> Recent Files"
-
+map <leader><space> <Action>(RecentFiles)
 map <leader>e <Action>(ActivateProjectToolWindow)
-let g:WhichKeyDesc_e = "<leader>e Open File Explorer"
-
 map <leader>j <Plug>(easymotion-s)
-let g:WhichKeyDesc_easymotion = "<leader>j Toggle Easymotion"
-
 map <leader>c <Action>(CommentByLineComment)
-let g:WhichKeyDesc_comment = "<leader>c Comment By Line"
-
 map <leader>r <Action>(RenameElement)
-let g:WhichKeyDesc_rename = "<leader>r Rename In Code"
-
 map <leader>1 <Action>(Back)
-let g:WhichKeyDesc_back = "<leader>1 Go Back"
 map <leader>2 <Action>(Forward)
-let g:WhichKeyDesc_forward = "<leader>2 Go Forward"
-
 map <leader>v <Action>(ShowErrorDescription)
-let g:WhichKeyDesc_ShowErrorDescription = "<leader>v View Error Description"
-
 map <leader>[ [{
-let g:WhichKeyDesc_PreviousUnmatched= "<leader>[ Previous Unmatched {"
 map <leader>] ]}
-let g:WhichKeyDesc_PreviousUnmatched= "<leader>] Next Unmatched }"
-
 " --- SPLIT
-let g:WhichKeyDesc_split= "<leader>s Split..."
 map <leader>ss <Action>(SplitVertically)
-let g:WhichKeyDesc_NewSplit = "<leader>ss New Vertical Split"
 map <leader>sd <Action>(NextSplitter)
-let g:WhichKeyDesc_SplitCycle = "<leader>sd Cycle Through Splits"
-
 " --- FIND
-let g:WhichKeyDesc_File = "<leader>f Find..."
 map <leader>fa <Action>(GotoFile)
-let g:WhichKeyDesc_GoToFile = "<leader>ff Find File"
 map <leader>fe <Action>(SearchEverywhere)
-let g:WhichKeyDesc_SearchEverywhere = "<leader>fe Find Everywhere"
 map <leader>fa <Action>(GotoAction)
-let g:WhichKeyDesc_GoToAction = "<leader>fa Find Action"
-
 " --- GO TO
-let g:WhichKeyDesc_GoTo = "<leader>g Go To..."
 map <leader>gi <Action>(GotoImplementation)
-let g:WhichKeyDesc_GoToImplementation = "<leader>gi Go To Implementation"
-
-" --- MULTICURSOR
-let g:WhichKeyDesc_NextOccurrence = "<leader>m Multi Cursor"
+" --- TEXT OCCURRENCES.
 map <leader>mn <Action>(SelectNextOccurrence)
-let g:WhichKeyDesc_SelectNextOccurrence = "<leader>mn Select Next Occurrence"
 map <leader>ma <Action>(SelectAllOccurrences)
-let g:WhichKeyDesc_SelectAllOccurrences = "<leader>ma Select All Occurrences"
-
 " -------------
 " ---PLUGINS---
 " Highlight copied text.
