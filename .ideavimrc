@@ -20,9 +20,9 @@ set notimeout
 let mapleader = " "
 " Delete to black hole register.
 map <leader>d "_d
-map <leader><space> <Action>(RecentFiles)
+map <leader>j <Action>(RecentFiles)
 map <leader>e <Action>(ActivateProjectToolWindow)
-map <leader>j <Plug>(easymotion-s)
+map <leader><space> <Plug>(easymotion-s)
 map <leader>c <Action>(CommentByLineComment)
 map <leader>r <Action>(RenameElement)
 map <leader>1 <Action>(Back)
@@ -30,9 +30,12 @@ map <leader>2 <Action>(Forward)
 map <leader>v <Action>(ShowErrorDescription)
 map <leader>[ [{
 map <leader>] ]}
-" move selection up and down
-map J :m '>+1<CR>gv=gv
-map K :m '<-2<CR>gv=gv
+" move selection up and down in visual mode.
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
+" move quicker in normal mode.
+nmap J 5j
+nmap K 5k
 " --- SPLIT
 map <leader>ss <Action>(SplitVertically)
 map <leader>sd <Action>(NextSplitter)
