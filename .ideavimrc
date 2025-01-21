@@ -25,8 +25,6 @@ map <leader>e <Action>(ActivateProjectToolWindow)
 map <leader><space> <Plug>(easymotion-s)
 map <leader>c <Action>(CommentByLineComment)
 map <leader>n <Action>(RenameElement)
-map <leader>1 <Action>(Back)
-map <leader>2 <Action>(Forward)
 map <leader>v <Action>(ShowErrorDescription)
 " Clear highlight.
 map <leader>/ :noh<CR>
