@@ -20,11 +20,11 @@ set notimeout
 let mapleader = " "
 " Delete to black hole register.
 map <leader>d "_d
-map <leader>r <Action>(RecentFiles)
+map <leader>j <Action>(RecentFiles)
 map <leader>e <Action>(ActivateProjectToolWindow)
 map <leader><space> <Plug>(easymotion-s)
 map <leader>c <Action>(CommentByLineComment)
-map <leader>n <Action>(RenameElement)
+map <leader>r <Action>(RenameElement)
 map <leader>v <Action>(ShowErrorDescription)
 " Clear highlight.
 map <leader>/ :noh<CR>
