@@ -30,6 +30,9 @@ map <leader>2 <Action>(Forward)
 map <leader>v <Action>(ShowErrorDescription)
 map <leader>[ [{
 map <leader>] ]}
+" move selection up and down
+map J :m '>+1<CR>gv=gv
+map K :m '<-2<CR>gv=gv
 " --- SPLIT
 map <leader>ss <Action>(SplitVertically)
 map <leader>sd <Action>(NextSplitter)
