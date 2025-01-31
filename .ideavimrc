@@ -20,9 +20,9 @@ set notimeout
 let mapleader = " "
 " Delete to black hole register.
 map <leader>d "_d
-map <leader>j <Action>(RecentFiles)
+map <leader><leader> <Action>(RecentFiles)
 map <leader>e <Action>(ActivateProjectToolWindow)
-map <leader><space> <Plug>(easymotion-s)
+map <leader>j <Plug>(easymotion-s)
 map <leader>c <Action>(CommentByLineComment)
 map <leader>r <Action>(RenameElement)
 map <leader>v <Action>(ShowErrorDescription)
@@ -35,16 +35,16 @@ vmap K :m '<-2<CR>gv=gv
 nmap J 5j
 nmap K 5k
 " --- SPLIT
-map <leader>ss <Action>(SplitVertically)
+map <leader>s <Action>(SplitVertically)
 " Map Ctrl + h/j/k/l to navigate between splits
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " --- FIND
-map <leader>fa <Action>(GotoFile)
-map <leader>fe <Action>(SearchEverywhere)
+map <leader>ff <Action>(GotoFile)
 map <leader>fa <Action>(GotoAction)
+map <leader>fe <Action>(SearchEverywhere)
 " --- GO TO
 map <leader>gi <Action>(GotoImplementation)
 " --- TEXT OCCURRENCES.
